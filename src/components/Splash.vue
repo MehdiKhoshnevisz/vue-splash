@@ -33,7 +33,7 @@ export default {
 }
 
 .vue-splash__anim {
-  animation: loadingAnimation 1.3s infinite;
+  animation: loadingAnimation2 1.3s infinite;
 }
 
 .vue-splash__anim img {
@@ -47,6 +47,30 @@ export default {
 
 @keyframes loadingAnimation {
   0% {
+    filter: drop-shadow(0px 0px 0px #00BFA5);
+  }
+  100% {
+    filter: drop-shadow(0px 0px 200px #00BFA5);
+  }
+}
+
+@keyframes loadingAnimation1 {
+  0% {
+    filter: drop-shadow(0px 0px 0px #00BFA5);
+  }
+  50% {
+    filter: drop-shadow(0px 0px 50px #00BFA5);
+  }
+  100% {
+    filter: drop-shadow(0px 0px 0px #00BFA5);
+  }
+}
+
+@keyframes loadingAnimation2 {
+  0% {
+    filter: drop-shadow(0px -1000px 200px #00BFA5);
+  }
+  50% {
     filter: drop-shadow(0px 0px 0px #00BFA5);
   }
   100% {
