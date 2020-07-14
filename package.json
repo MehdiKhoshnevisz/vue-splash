@@ -1,7 +1,6 @@
 {
   "name": "vue-splash",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -38,5 +37,7 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "repository": "git://github.com/MehdiKhoshnevisz/vue-splash" ,
+  "publishConfig": { "registry": "http://registry.npmjs.org" }
 }
