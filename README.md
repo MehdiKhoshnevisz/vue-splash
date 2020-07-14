@@ -1,5 +1,5 @@
 # Vue Splash
-fire splash in first of your app 💫
+splash your app logo 💦
 
 ## Installation
 ```
@@ -10,6 +10,3 @@ npm install
 ```
 npm run serve
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
