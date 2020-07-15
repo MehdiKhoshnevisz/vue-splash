@@ -5,12 +5,8 @@
 </template>
 
 <script>
-import Splash from '@/components/Splash';
 export default {
-  name: "App",
-  components: {
-    Splash
-  }
+  name: "App"
 };
 </script>
 
