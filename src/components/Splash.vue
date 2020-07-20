@@ -1,8 +1,8 @@
 <template>
   <div class="vue-splash">
-    <div class="text-center">
+    <div>
       <div class="vue-splash__anim mb-3">
-        <img src="@/assets/vue.svg" />
+        <img :src="logo" />
       </div>
       <div class="vue-splash__text">
         <span>Splash Your Logo</span>
@@ -13,7 +13,13 @@
 
 <script>
 export default {
-  name: "Splash"
+  name: "Splash",
+  props: {
+    logo: {
+      type: String,
+      default: "",
+    },
+  },
 };
 </script>
 
@@ -47,34 +53,34 @@ export default {
 
 @keyframes loadingAnimation {
   0% {
-    filter: drop-shadow(0px 0px 0px #00BFA5);
+    filter: drop-shadow(0px 0px 0px #00bfa5);
   }
   100% {
-    filter: drop-shadow(0px 0px 200px #00BFA5);
+    filter: drop-shadow(0px 0px 200px #00bfa5);
   }
 }
 
 @keyframes loadingAnimation1 {
   0% {
-    filter: drop-shadow(0px 0px 0px #00BFA5);
+    filter: drop-shadow(0px 0px 0px #00bfa5);
   }
   50% {
-    filter: drop-shadow(0px 0px 50px #00BFA5);
+    filter: drop-shadow(0px 0px 50px #00bfa5);
   }
   100% {
-    filter: drop-shadow(0px 0px 0px #00BFA5);
+    filter: drop-shadow(0px 0px 0px #00bfa5);
   }
 }
 
 @keyframes loadingAnimation2 {
   0% {
-    filter: drop-shadow(0px -1000px 200px #00BFA5);
+    filter: drop-shadow(0px -1000px 200px #00bfa5);
   }
   50% {
-    filter: drop-shadow(0px 0px 0px #00BFA5);
+    filter: drop-shadow(0px 0px 0px #00bfa5);
   }
   100% {
-    filter: drop-shadow(0px 0px 200px #00BFA5);
+    filter: drop-shadow(0px 0px 200px #00bfa5);
   }
 }
 </style>
