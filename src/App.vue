@@ -1,12 +1,19 @@
 <template>
   <div id="app">
-    <Splash />
+    <Splash :logo="logo" />
   </div>
 </template>
 
 <script>
+import VueLogo from "@/assets/vue.svg";
+
 export default {
-  name: "App"
+  name: "App",
+  computed: {
+    logo() {
+      return VueLogo;
+    },
+  },
 };
 </script>
 
