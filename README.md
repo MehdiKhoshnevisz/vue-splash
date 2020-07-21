@@ -16,7 +16,7 @@ Plugin install:
 
 ```js
 import Vue from 'vue'
-import Splash from "vue-splash";
+import Splash from 'vue-splash';
 
 Vue.use(Splash)
 ```
