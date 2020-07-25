@@ -1,5 +1,7 @@
 # Vue Splash
-splash your app logo 💦
+Splash Your App Logo 💦
+show the splash, until your app is loaded...
+
 
 ## Demo
 
