@@ -1,6 +1,6 @@
 {
   "name": "vue-splash",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
