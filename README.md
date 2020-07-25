@@ -28,7 +28,7 @@ Vue.use(Splash)
 
 | name            | type                             | default    | description                                                            |
 | --------------- | -------------------------------- | ---------- | ---------------------------------------------------------------------- |
-| source          | String                           | ''         | image source to load your logo                                         |
+| logo            | String                           | ''         | image source to load your logo                                         |
 
 
 ## License
