@@ -26,9 +26,10 @@ Vue.use(Splash)
 
 ## Props
 
-| name            | type                             | default    | description                                                            |
-| --------------- | -------------------------------- | ---------- | ---------------------------------------------------------------------- |
-| logo            | String                           | ''         | image source to load your logo                                         |
+| name            | type                             | default                     | description                                                            |
+| --------------- | -------------------------------- | --------------------------- | ---------------------------------------------------------------------- |
+| logo            | String                           | ''                          | image source to load your logo                                         |
+| caption         | String                           | 'Your Magnificent App Name' | define app name                                                        |
 
 
 ## License
