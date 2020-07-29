@@ -1,0 +1,17 @@
+
+@import 'fonts';
+
+html, body {
+  margin: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@import 'variables';
+@import 'layout';
