@@ -4,8 +4,8 @@
       <div class="vue-splash__anim mb-3">
         <img :src="logo" />
       </div>
-      <div class="vue-splash__text">
-        <span>Splash Your Logo</span>
+      <div v-if="caption" class="vue-splash__text">
+        <span>{{ caption }}</span>
       </div>
     </div>
   </div>
@@ -19,6 +19,10 @@ export default {
       type: String,
       default: "",
     },
+    caption: {
+      type: String,
+      default: `What's Your App Name? 🤔`
+    }
   },
 };
 </script>
@@ -33,22 +37,25 @@ export default {
   width: 100%;
   height: 100%;
   display: flex;
-  position: fixed;
+  /* position: absolute; */
   align-items: center;
   justify-content: center;
 }
 
 .vue-splash__anim {
-  animation: loadingAnimation2 1.3s infinite;
+  text-align: center;
+  animation: loadingAnimation 1.3s infinite;
 }
 
 .vue-splash__anim img {
-  max-width: 230px;
+  margin: auto;
+  max-width: 200px;
 }
 
 .vue-splash__text {
-  margin-top: 60px;
-  font-size: 20px;
+  margin-top: 50px;
+  font-size: 1rem;
+  text-align: center;
 }
 
 @keyframes loadingAnimation {
