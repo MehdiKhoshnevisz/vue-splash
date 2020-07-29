@@ -21,7 +21,7 @@ export default {
     },
     caption: {
       type: String,
-      default: `What's Your App Name? 🤔`
+      default: `Your Magnificent App Name`
     }
   },
 };
