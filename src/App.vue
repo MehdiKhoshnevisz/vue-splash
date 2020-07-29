@@ -6,32 +6,29 @@
       <span class="vue-splash-header__caption">splash your app logo 💦</span>
     </header>
     <main class="vue-splash-content">
-      <Browser>
-        <Splash :logo="logo" />
-      </Browser>
+      <Browser :key="BrowserComponentKey" @update="forceRerender" />
     </main>
   </div>
 </template>
 
 <script>
-import VueLogo from "@/assets/vue.svg";
 import ForkMe from "@/components/ForkMe";
-import Browser from '@/components/Browser';
+import Browser from "@/components/Browser";
 
 export default {
   name: "App",
   components: {
     ForkMe,
-    Browser
+    Browser,
   },
   data() {
     return {
-      isLoaded: false
+      BrowserComponentKey: 0,
     };
   },
-  computed: {
-    logo() {
-      return VueLogo;
+  methods: {
+    forceRerender() {
+      this.BrowserComponentKey += 1;
     },
   },
 };
