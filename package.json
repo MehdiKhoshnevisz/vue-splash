@@ -1,11 +1,13 @@
 {
   "name": "vue-splash",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name vueSplash ./src/main.js",
     "lint": "vue-cli-service lint"
   },
+  "main": "dist/vueSplash.umd.js",
+  "unpkg": "dist/vueSplash.umd.min.js",
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
