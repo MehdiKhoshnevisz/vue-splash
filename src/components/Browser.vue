@@ -35,7 +35,7 @@
 
     <transition name="fade">
       <div v-if="isLoaded" class="vue-splash-browser__splash-wrapper">
-        <Splash :logo="logo" />
+        <vue-splash :logo="logo" />
       </div>
     </transition>
 
