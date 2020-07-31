@@ -1,3 +1,6 @@
 module.exports = {
-  publicPath: ''
+  publicPath: '',
+  css: {
+    extract: false
+  }
 }
