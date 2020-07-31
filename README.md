@@ -18,10 +18,18 @@ npm i vue-splash
 Plugin install:
 
 ```js
-import Vue from 'vue'
+import Vue from 'vue';
 import Splash from 'vue-splash';
 
-Vue.use(Splash)
+Vue.use(Splash);
+```
+
+Import in template:
+
+```vue
+<template>
+  <Splash :logo="Your Logo Source" />
+</template>
 ```
 
 ## Props
