@@ -11,11 +11,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:lib": "vue-cli-service build --target lib --name vue-splash src/main.js",
+    "build:lib": "vue-cli-service build --target lib --name vue-splash ./src/plugin/vue-splash.js",
     "lint": "vue-cli-service lint"
   },
   "prepublishOnly": "$npm_execpath build:lib",
-  "main": "dist/vue-splash.umd.min.js",
+  "main": "dist/vue-splash.common.js",
   "unpkg": "dist/vue-splash.umd.min.js",
   "jsdelivr": "dist/vue-splash.umd.min.js",
   "browser": {
@@ -59,7 +59,18 @@
     "url": "https://github.com/MehdiKhoshnevisz/vue-splash.git"
   },
   "homepage": "https://mehdikhoshnevisz.github.io/vue-splash",
+  "bugs": "https://github.com/MehdiKhoshnevisz/vue-splash/issues",
   "publishConfig": {
     "registry": "http://registry.npmjs.org"
-  }
+  },
+  "files": ["dist/*"],
+  "keywords": [
+    "vue-splash",
+    "vue",
+    "js",
+    "splash",
+    "screen",
+    "loading",
+    "logo"
+  ]
 }
