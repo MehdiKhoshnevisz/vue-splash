@@ -21,6 +21,9 @@
   "browser": {
     "./sfc": "src/components/VueSplash.vue"
   },
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.4.0",
     "@vue/cli-plugin-eslint": "^4.4.0",
