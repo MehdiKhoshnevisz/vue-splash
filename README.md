@@ -19,16 +19,23 @@ Plugin install:
 
 ```js
 import Vue from 'vue';
-import Splash from 'vue-splash';
+import VueSplash from 'vue-splash';
 
-Vue.use(Splash);
+Vue.use(VueSplash);
 ```
 
 Import in template:
 
 ```vue
 <template>
-  <Splash :logo="Your Logo Source" />
+  <vue-splash
+    :show="true"
+    logo="Your Magnificent Logo Source"
+    title="Your Magnificent App Name"
+    color="#00bfa5"
+    :size="300"
+    :fixed="true"
+  />
 </template>
 ```
 
@@ -36,8 +43,13 @@ Import in template:
 
 | name            | type                             | default                     | description                                                            |
 | --------------- | -------------------------------- | --------------------------- | ---------------------------------------------------------------------- |
+| show            | Boolean                          | true                        | decide to show component                                               |
 | logo            | String                           | ''                          | image source to load your logo                                         |
-| caption         | String                           | 'Your Magnificent App Name' | define app name                                                        |
+| title           | String                           | 'Your Magnificent App Name' | define app name                                                        |
+| color           | String                           | '#00bfa5'                   | define splash color                                                    |
+| size            | String | Number                  | 180                         | define splash logo size(px)                                            |
+| fixed           | Boolean                          | true                        | fixed to full screen                                                   |
+
 
 
 ## License
