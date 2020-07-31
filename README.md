@@ -47,7 +47,7 @@ Import in template:
 | logo            | String                           | ''                          | image source to load your logo                                         |
 | title           | String                           | 'Your Magnificent App Name' | define app name                                                        |
 | color           | String                           | '#00bfa5'                   | define splash color                                                    |
-| size            | String | Number                  | 180                         | define splash logo size(px)                                            |
+| size            | String, Number                   | 180                         | define splash logo size(px)                                            |
 | fixed           | Boolean                          | true                        | fixed to full screen                                                   |
 
 
