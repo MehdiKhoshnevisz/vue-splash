@@ -19,7 +19,7 @@ export default {
   props: {
     show: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     logo: {
       type: String,
@@ -39,7 +39,7 @@ export default {
     },
     fixed: {
       type: Boolean,
-      default: false,
+      default: true,
     },
   },
   created() {
