@@ -1,55 +1,97 @@
 <template>
-  <div class="vue-splash">
-    <div>
-      <div class="vue-splash__anim mb-3">
-        <img :src="logo" />
-      </div>
-      <div v-if="caption" class="vue-splash__text">
-        <span>{{ caption }}</span>
+  <transition name="fade">
+    <div v-if="show" :class="['vue-splash', { 'vue-splash--fixed': fixed }]">
+      <div>
+        <div class="vue-splash__anim mb-3">
+          <img :src="logo" :style="imageStyle" />
+        </div>
+        <div v-if="title" class="vue-splash__text">
+          <span>{{ title }}</span>
+        </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
 export default {
   name: "VueSplash",
   props: {
+    show: {
+      type: Boolean,
+      default: false,
+    },
     logo: {
       type: String,
       default: "",
     },
-    caption: {
+    title: {
       type: String,
-      default: `Your Magnificent App Name`
-    }
+      default: "",
+    },
+    color: {
+      type: String,
+      default: "#00bfa5",
+    },
+    size: {
+      type: [Number, String],
+      default: 180,
+    },
+    fixed: {
+      type: Boolean,
+      default: false,
+    },
   },
+  created() {
+    this.setColor();
+  },
+  computed: {
+    imageStyle() {
+      let width = this.size + "px";
+
+      return {
+        width,
+      };
+    },
+  },
+  methods: {
+    setColor() {
+      document.documentElement.style.setProperty("--splash-color", this.color);
+    }
+  }
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+$splash-color: var(--splash-color);
+
 .vue-splash {
-  top: 0;
-  left: 0;
   flex: 1;
-  right: 0;
-  bottom: 0;
   width: 100%;
   height: 100%;
   display: flex;
-  /* position: absolute; */
   align-items: center;
   justify-content: center;
+
+  &--fixed {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: white;
+  }
 }
 
 .vue-splash__anim {
   text-align: center;
-  animation: loadingAnimation 1.3s infinite;
-}
+  animation: splashAnimation 1.3s infinite;
 
-.vue-splash__anim img {
-  margin: auto;
-  max-width: 200px;
+  img {
+    margin: auto;
+  }
 }
 
 .vue-splash__text {
@@ -58,36 +100,36 @@ export default {
   text-align: center;
 }
 
-@keyframes loadingAnimation {
+@keyframes splashAnimation {
   0% {
-    filter: drop-shadow(0px 0px 0px #00bfa5);
+    filter: drop-shadow(0px 0px 0px $splash-color);
   }
   100% {
-    filter: drop-shadow(0px 0px 200px #00bfa5);
+    filter: drop-shadow(0px 0px 200px $splash-color);
   }
 }
 
-@keyframes loadingAnimation1 {
-  0% {
-    filter: drop-shadow(0px 0px 0px #00bfa5);
-  }
-  50% {
-    filter: drop-shadow(0px 0px 50px #00bfa5);
-  }
-  100% {
-    filter: drop-shadow(0px 0px 0px #00bfa5);
-  }
-}
+// @keyframes splashAnimation1 {
+//   0% {
+//     filter: drop-shadow(0px 0px 0px #00bfa5);
+//   }
+//   50% {
+//     filter: drop-shadow(0px 0px 50px #00bfa5);
+//   }
+//   100% {
+//     filter: drop-shadow(0px 0px 0px #00bfa5);
+//   }
+// }
 
-@keyframes loadingAnimation2 {
-  0% {
-    filter: drop-shadow(0px -1000px 200px #00bfa5);
-  }
-  50% {
-    filter: drop-shadow(0px 0px 0px #00bfa5);
-  }
-  100% {
-    filter: drop-shadow(0px 0px 200px #00bfa5);
-  }
-}
+// @keyframes splashAnimation2 {
+//   0% {
+//     filter: drop-shadow(0px -1000px 200px #00bfa5);
+//   }
+//   50% {
+//     filter: drop-shadow(0px 0px 0px #00bfa5);
+//   }
+//   100% {
+//     filter: drop-shadow(0px 0px 200px #00bfa5);
+//   }
+// }
 </style>
