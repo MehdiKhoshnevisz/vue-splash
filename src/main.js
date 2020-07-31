@@ -1,10 +1,10 @@
 import Vue from "vue";
 import App from "./App.vue";
-import Splash from "@/plugin/splashPlugin";
+import VueSplash from "@/plugin/vue-splash";
 
 import "@/assets/styles/main.scss";
 
-Vue.use(Splash);
+Vue.use(VueSplash);
 
 new Vue({
   render: (h) => h(App),

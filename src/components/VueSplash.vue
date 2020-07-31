@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "Splash",
+  name: "VueSplash",
   props: {
     logo: {
       type: String,
