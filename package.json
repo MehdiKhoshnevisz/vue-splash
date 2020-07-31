@@ -1,16 +1,25 @@
 {
   "name": "vue-splash",
   "version": "0.2.0",
+  "author": {
+    "name": "Mehdi Khoshnevisz (https://github.com/MehdiKhoshnevisz)",
+    "email": "mkhnsz1996@gmail.com"
+  },
+  "description": "splash plugin for vue.js",
+  "private": false,
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vueSplash ./src/main.js",
+    "build": "vue-cli-service build",
+    "build:lib": "vue-cli-service build --target lib --name vue-splash src/main.js",
     "lint": "vue-cli-service lint"
   },
-  "main": "dist/vueSplash.umd.js",
-  "unpkg": "dist/vueSplash.umd.min.js",
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+  "prepublishOnly": "$npm_execpath build:lib",
+  "main": "dist/vue-splash.umd.min.js",
+  "unpkg": "dist/vue-splash.umd.min.js",
+  "jsdelivr": "dist/vue-splash.umd.min.js",
+  "browser": {
+    "./sfc": "src/components/VueSplash.vue"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.4.0",
@@ -42,7 +51,11 @@
     "last 2 versions",
     "not dead"
   ],
-  "repository": "git://github.com/MehdiKhoshnevisz/vue-splash",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MehdiKhoshnevisz/vue-splash.git"
+  },
+  "homepage": "https://mehdikhoshnevisz.github.io/vue-splash",
   "publishConfig": {
     "registry": "http://registry.npmjs.org"
   }
