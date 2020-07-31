@@ -8,7 +8,7 @@ const plugin =  {
 
 VueSplash.install = plugin.install;
 
-// Automatic installation if Vue has been added to the global scope
+// Auto-install when vue is found (eg. in browser via <script> tag)
 let GlobalVue = null;
 
 if (typeof window !== "undefined") {
