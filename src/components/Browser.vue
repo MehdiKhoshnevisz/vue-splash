@@ -35,7 +35,14 @@
 
     <transition name="fade">
       <div v-if="isLoaded" class="vue-splash-browser__splash-wrapper">
-        <vue-splash :logo="logo" />
+        <vue-splash
+          :show="isLoaded"
+          :logo="logo"
+          title="Your Magnificent App Name"
+          color="#00bfa5"
+          :size="200"
+          :fixed="false"
+        />
       </div>
     </transition>
 
@@ -74,6 +81,8 @@ export default {
   },
   methods: {
     startTimeout() {
+      if (this.isLoaded) return;
+
       this.isLoaded = true;
 
       let miliSeconds = 4000;
