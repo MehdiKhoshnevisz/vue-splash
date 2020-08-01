@@ -2,7 +2,7 @@
   <transition name="fade">
     <div v-if="show" :class="['vue-splash', { 'vue-splash--fixed': fixed }]">
       <div>
-        <div class="vue-splash__anim mb-3">
+        <div class="vue-splash__anim">
           <img :src="logo" :style="imageStyle" />
         </div>
         <div v-if="title" class="vue-splash__text">
@@ -23,7 +23,7 @@ export default {
     },
     logo: {
       type: String,
-      default: "",
+      default: "https://svgshare.com/i/NRE.svg",
     },
     title: {
       type: String,
@@ -107,6 +107,13 @@ $splash-color: var(--splash-color);
   100% {
     filter: drop-shadow(0px 0px 200px $splash-color);
   }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 
 // @keyframes splashAnimation1 {
