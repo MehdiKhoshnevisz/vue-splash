@@ -1,6 +1,6 @@
 {
   "name": "vue-splash",
-  "version": "1.0.0-alpha4",
+  "version": "1.0.0-alpha5",
   "author": {
     "name": "Mehdi Khoshnevisz (https://github.com/MehdiKhoshnevisz)",
     "email": "mkhnsz1996@gmail.com"
@@ -29,6 +29,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "sass": "^1.26.10",
     "sass-loader": "^9.0.2",
+    "terser-webpack-plugin": "^3.0.8",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
