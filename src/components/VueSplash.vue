@@ -112,31 +112,8 @@ $splash-color: var(--splash-color);
 .fade-enter-active, .fade-leave-active {
   transition: opacity .3s;
 }
+
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
-
-// @keyframes splashAnimation1 {
-//   0% {
-//     filter: drop-shadow(0px 0px 0px #00bfa5);
-//   }
-//   50% {
-//     filter: drop-shadow(0px 0px 50px #00bfa5);
-//   }
-//   100% {
-//     filter: drop-shadow(0px 0px 0px #00bfa5);
-//   }
-// }
-
-// @keyframes splashAnimation2 {
-//   0% {
-//     filter: drop-shadow(0px -1000px 200px #00bfa5);
-//   }
-//   50% {
-//     filter: drop-shadow(0px 0px 0px #00bfa5);
-//   }
-//   100% {
-//     filter: drop-shadow(0px 0px 200px #00bfa5);
-//   }
-// }
 </style>
