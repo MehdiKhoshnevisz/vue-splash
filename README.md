@@ -30,25 +30,38 @@ Import in template:
 <template>
   <vue-splash
     :show="true"
-    logo="Your Magnificent Logo Source"
+    :logo="logo"
     title="Your Magnificent App Name"
     color="#00bfa5"
     :size="300"
     :fixed="true"
   />
 </template>
+
+<script>
+import YourLogo from "<Your Magnificent Logo Path>";
+
+export default {
+  name: "YourMagnificentVueComponent",
+  computed: {
+    logo() {
+      return YourLogo;
+    }
+  }
+}
+</script>
 ```
 
 ## Props
 
-| name            | type                             | default                     | description                                                            |
-| --------------- | -------------------------------- | --------------------------- | ---------------------------------------------------------------------- |
-| show            | Boolean                          | true                        | decide to show component                                               |
-| logo            | String                           | ''                          | image source to load your logo                                         |
-| title           | String                           | 'Your Magnificent App Name' | define app name                                                        |
-| color           | String                           | '#00bfa5'                   | define splash color                                                    |
-| size            | String, Number                   | 180                         | define splash logo size(px)                                            |
-| fixed           | Boolean                          | true                        | fixed to full screen                                                   |
+| name            | type                             | default                          | description                                                            |
+| --------------- | -------------------------------- | -------------------------------- | ---------------------------------------------------------------------- |
+| show            | Boolean                          | true                             | decide to show component                                               |
+| logo            | String                           | 'https://svgshare.com/i/NRE.svg' | image source to load your logo                                         |
+| title           | String                           | 'Your Magnificent App Name'      | define app name                                                        |
+| color           | String                           | '#00bfa5'                        | define splash color                                                    |
+| size            | String, Number                   | 180                              | define splash logo size(px)                                            |
+| fixed           | Boolean                          | true                             | fixed to full screen                                                   |
 
 
 
