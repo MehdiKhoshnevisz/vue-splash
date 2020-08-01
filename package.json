@@ -1,6 +1,6 @@
 {
   "name": "vue-splash",
-  "version": "1.0.0-alpha2",
+  "version": "1.0.0-alpha3",
   "author": {
     "name": "Mehdi Khoshnevisz (https://github.com/MehdiKhoshnevisz)",
     "email": "mkhnsz1996@gmail.com"
@@ -17,10 +17,6 @@
   "prepublishOnly": "$npm_execpath build:lib",
   "main": "dist/vue-splash.common.js",
   "unpkg": "dist/vue-splash.umd.min.js",
-  "jsdelivr": "dist/vue-splash.umd.min.js",
-  "browser": {
-    "./sfc": "src/components/VueSplash.vue"
-  },
   "dependencies": {
     "vue": "^2.6.11"
   },
@@ -63,7 +59,6 @@
   "publishConfig": {
     "registry": "http://registry.npmjs.org"
   },
-  "files": ["dist/*"],
   "keywords": [
     "vue-splash",
     "vue",
