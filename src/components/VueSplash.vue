@@ -8,6 +8,7 @@
         <div v-if="title" class="vue-splash__text">
           <span>{{ title }}</span>
         </div>
+        <div v-if="customText" v-html="customText"></div>
       </div>
     </div>
   </transition>
@@ -26,6 +27,10 @@ export default {
       default: "https://svgshare.com/i/NRE.svg",
     },
     title: {
+      type: String,
+      default: "",
+    },
+    customText: {
       type: String,
       default: "",
     },
@@ -109,11 +114,13 @@ $splash-color: var(--splash-color);
   }
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .3s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
 }
 
-.fade-enter, .fade-leave-to {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
 </style>
