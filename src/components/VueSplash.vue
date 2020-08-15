@@ -107,6 +107,7 @@ $splash-color: var(--splash-color);
 
 .vue-splash__custom-text {
   margin-top: 50px;
+  text-align: center;
 }
 
 @keyframes splashAnimation {
