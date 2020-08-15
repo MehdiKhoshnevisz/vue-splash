@@ -8,7 +8,7 @@
         <div v-if="title" class="vue-splash__text">
           <span>{{ title }}</span>
         </div>
-        <div v-if="customText" v-html="customText"></div>
+        <div v-if="customText" class="vue-splash__custom-text" v-html="customText"></div>
       </div>
     </div>
   </transition>
@@ -103,6 +103,10 @@ $splash-color: var(--splash-color);
   margin-top: 50px;
   font-size: 1rem;
   text-align: center;
+}
+
+.vue-splash__custom-text {
+  margin-top: 50px;
 }
 
 @keyframes splashAnimation {
