@@ -54,16 +54,16 @@ export default {
 
 ## Props
 
-| name            | type                             | default                          | description                                                            |
-| --------------- | -------------------------------- | -------------------------------- | ---------------------------------------------------------------------- |
-| show            | Boolean                          | true                             | decide to show component                                               |
-| logo            | String                           | https://svgshare.com/i/NRE.svg   | image source to load your logo                                         |
-| title           | String                           | Your Magnificent App Name        | define app name                                                        |
-| custom-text     | String                           |                                  | write your custom text or html instead of title prop                   |
-| color           | String                           | #00bfa5                          | define splash color                                                    |
-| size            | String, Number                   | 180                              | define splash logo size(px)                                            |
-| fixed           | Boolean                          | true                             | fixed to full screen                                                   |
-
+| name              | type                             | default                          | description                                                            |
+| ----------------- | -------------------------------- | -------------------------------- | ---------------------------------------------------------------------- |
+| show              | Boolean                          | true                             | decide to show component                                               |
+| logo              | String                           | https://svgshare.com/i/NRE.svg   | image source to load your logo                                         |
+| title             | String                           | Your Magnificent App Name        | define app name                                                        |
+| custom-text       | String                           |                                  | write your custom text or html instead of title prop                   |
+| color             | String                           | #00bfa5                          | define splash color                                                    |
+| size              | String, Number                   | 180                              | define splash logo size (px)                                           |
+| fixed             | Boolean                          | true                             | fixed to full screen                                                   |
+| background-color  | String                           |                                  | set background color (it works if the "fixed" property is set to true) |
 
 
 ## License
