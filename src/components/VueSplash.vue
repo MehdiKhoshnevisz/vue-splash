@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div v-if="show" :class="['vue-splash', { 'vue-splash--fixed': fixed }]">
+    <div v-if="show" :class="['vue-splash', { 'vue-splash--fixed': fixed }]" :style="vueSplashStyle">
       <div>
         <div class="vue-splash__anim">
           <img :src="logo" :style="imageStyle" />
@@ -46,6 +46,10 @@ export default {
       type: Boolean,
       default: true,
     },
+    backgroundColor: {
+      type: String,
+      default: '',
+    }
   },
   created() {
     this.setColor();
@@ -58,6 +62,22 @@ export default {
         width,
       };
     },
+
+    vueSplashStyle() {
+      let backgroundColor = '';
+
+      if (this.fixed && this.backgroundColor) {
+        backgroundColor = this.backgroundColor;
+      } else if (this.fixed) {
+        backgroundColor = '#ffffff';
+      } else {
+        backgroundColor = 'transparent';
+      }
+
+      return {
+        backgroundColor
+      }
+    }
   },
   methods: {
     setColor() {
