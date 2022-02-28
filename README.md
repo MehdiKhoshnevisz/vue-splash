@@ -66,6 +66,12 @@ export default {
 | background-color  | String                           |                                  | set background color (it works if the "fixed" property is set to true) |
 
 
+## Support
+If you like this plugin and want to support me to make more plugins and apps like this, you can pay me with bitcoin\
+my bitcoin wallet: ```bc1qxx8397gg9367n3lwft0pz70wgs8x9waehcy8lc```.\
+also you can [buy me a coffee](https://www.buymeacoffee.com/imehdi) :)
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
