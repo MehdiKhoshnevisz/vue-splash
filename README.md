@@ -67,9 +67,9 @@ export default {
 
 
 ## Support
-If you like this plugin and want to support me to make more plugins and apps like this, you can pay me with bitcoin\
-my bitcoin wallet: ```bc1qxx8397gg9367n3lwft0pz70wgs8x9waehcy8lc```.\
-also you can [buy me a coffee](https://www.buymeacoffee.com/imehdi) :)
+If you like this plugin and want to support me to make more plugins and apps like this, you can pay me with SOL\
+My SOL wallet: ```4BjqDB5hGmZVkiRuBa5JkhceLVaTokYg4Gqe4fkV6Lby```.\
+Also you can [buy me a coffee](https://www.buymeacoffee.com/imehdi) :)
 
 
 ## License
